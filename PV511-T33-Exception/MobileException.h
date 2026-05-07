@@ -37,3 +37,15 @@ public:
 		return "SecondsException: " + text + " = " + std::to_string(seconds);
 	}
 };
+
+class PriceException : public MobileException {
+protected:
+	float price;
+public:
+	PriceException(string text, float price) : MobileException(text), price(price) {
+
+	}
+	virtual string showMessage()const override {
+		return "PriceException: " + text + " = " + std::to_string(price);
+	}
+};
