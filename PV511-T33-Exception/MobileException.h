@@ -25,3 +25,15 @@ public:
 		return "NameException: " + text + " = " + name;
 	}
 };
+
+class SecondsException : public MobileException {
+protected:
+	int seconds;
+public:
+	SecondsException(string text, int seconds) : MobileException(text), seconds(seconds) {
+
+	}
+	virtual string showMessage()const override {
+		return "SecondsException: " + text + " = " + std::to_string(seconds);
+	}
+};
